@@ -54,7 +54,7 @@ Seems like this is exaclty a weakly-sutable for AI problem, as it is exactly an 
 - Prompts are lost, but often retried
 - I spend a lot of time trying to change prompts, finaly [found a trivial bug | implemented myself much faster] 
   
-## Approaches for next-gen IDE
+## Approaches for next-gen AI Programming
 
 ### Multi-level approach
 - top level: general system requrements / architecture and diagramms / "pattern level" / class level / function level / loop|operator level
@@ -68,5 +68,6 @@ Or just allow embedding of traditional programming language in natural language 
 ### Future is a group of specialized agents working together?
 - one generates code, another checks "what function arguments should be, of what type and in what order". What kind of questions to we ask ourselfs when we do programming?
 
-
-
+### RAG for used libraries
+- provide better context v.r.t. libraries used in development.
+- solve problems with documentation missing/underrepresented in LLM pretrain data 
