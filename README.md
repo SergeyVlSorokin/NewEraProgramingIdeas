@@ -65,6 +65,11 @@ Seems like this is exaclty a weakly-sutable for AI problem, as it is exactly an 
 - sorta means we do not believe we will have a new full-scale paradigm
 Or just allow embedding of traditional programming language in natural language (but how to embedd for a part of function)
 
+### Current issues with prompt programming / vibe programming
+- Seems to rely on comments to keep track of what it is going to do -> Let it do in a structured way
+- Do more than asked and do wrong things as result
+- Ignores styling preferences -> Should we have code style loaded to context
+
 ### Future is a group of specialized agents working together?
 - one generates code, another checks "what function arguments should be, of what type and in what order". What kind of questions to we ask ourselfs when we do programming?
 
