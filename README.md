@@ -52,7 +52,11 @@ Seems like this is exaclty a weakly-sutable for AI problem, as it is exactly an 
 
 ## Problems in current approach
 - Prompts are lost, but often retried
-- I spend a lot of time trying to change prompts, finaly [found a trivial bug | implemented myself much faster] 
+- I spend a lot of time trying to change prompts, finaly [found a trivial bug | implemented myself much faster]
+
+## General LLM issues
+- LLMs seems to not able to keep focus on target during execution of long run
+- LLMs are bad at selecting good/promising solutions from generated options (e.g. invent a novel research direction, understand which theorem can be interesting/good to solve)
   
 ## Approaches for next-gen AI Programming
 
@@ -74,5 +78,6 @@ Or just allow embedding of traditional programming language in natural language 
 - one generates code, another checks "what function arguments should be, of what type and in what order". What kind of questions to we ask ourselfs when we do programming?
 
 ### RAG for used libraries
+- available in e.g. Cursor
 - provide better context v.r.t. libraries used in development.
 - solve problems with documentation missing/underrepresented in LLM pretrain data 
