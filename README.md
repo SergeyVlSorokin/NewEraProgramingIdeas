@@ -53,6 +53,43 @@ Seems like this is exaclty a weakly-sutable for AI problem, as it is exactly an 
 ## Problems in current approach
 - Prompts are lost, but often retried
 - I spend a lot of time trying to change prompts, finaly [found a trivial bug | implemented myself much faster]
+- can't handle large code:  I've had ChatGPT lose track of the goal with larger endeavours and had to rebuild the same script twice. I've found that combining LLMs for writing with "chunking" techniques (e.g. writing code in small sequential pieces in Zapier) to be an effective technique for getting around this problem. This way, you can build a chunk and test it, before it's gone from the LLM's memory.
+- When an agent starts getting confused and doing really daft things, it's probably best to start a new session with fresh context.
+- Make sure your prompts give clear rules about how to work with your project. Best if your rules are codified and enforced.
+## Approaches currently used with Vibe coding tools 
+### 1
+You are right. Some tactics that help - 
+1) use either another AI tool to plan out the project structure in advance (Grok/Claude are good for this); then use coding tool to build step by step.
+2) in the coding tool, limit each prompt request to a very small change in codebase and after each implementation ask AI to explain the implementation to you and also ask it for any potential bugs.
+3) when stuck in a circular loop bug hole, use another coding tool to debug. Load the project in cursor/windsurf and ask for help.
+### 2
+Take 1: After dense codebases, i find it still works if you chunk up the tasks to tackle into medium or bitesized - which is kind of what it is meant for today on the newer models.
+
+Example: add endpoint, or script, that does Y, in location X. Do/don’t use A, B, C. Or, “get going on this file/folder’s test suites”.
+
+I find it’s still very good at spinning up infrastructure and handling CICD.
+
+Take 2:
+If you’re looking for specific outputs requiring high levels of consisten accuracy; i’ve noticed it becomes 2-3x efficient if you essentially re-inforce it yourself and generate samples of good and results for the LLM as files. If you ask it to analyze those final results, and prompt well, i’ve managed to get the LLM to produce a very robust system. This isn’t toil-less, but it’s where we’re at at the moment without training your own fine tuned model
+### 3
+I now use AI for everything, don't even type any more, but it's like being in constant architect / code reviewer mode. You still have to be very involved with the code, and question the machine constantly.
+
+Small modules, full test coverage, and knowing when to interrupt it with extra context is key.
+
+Don't architect and implement in the same session. when implementing, make sure the agent keeps progress notes so another agent can continue a task with context if necessary. 
+### 4
+I started by writing a requirements doc with a level of detail similar to what I would have expected to hand off to a junior engineer. These requirements were as detailed as I could make them, including components I wanted it to create, how they should behave and validate, and examples of inputs and expected outcomes.
+
+Then I asked it to break my requirements out into deliverable milestones.
+
+Then I had the Cursor agent write each milestone.
+### 5
+You cannot. The first thing you need to establish a project structure and establish interaction diagram independently from lovable and keep it perfecting till you feel that functionality is well defined and crisp. 
+
+Once done, pass it to lovable. Then, lovable understands what is required. Please note that it has limited context window, so it cannot fit the context window. So, it will generate some extra file. So, you need to reinforce again and again. The best is to ask to code component by component or page by page. You should have a visual model of project structure and interactions. Your design can change but keep the design updated in document as well as interaction diagrams. 
+
+This will be the model for future coding paradigm where there will be design window and coding window and your job is to keep them in sync as AI generates the code. In future, the context partition will emerge within LLM models which helps to act effectively. It's still work in progress.
+
 
 ## General LLM issues
 - LLMs seems to not able to keep focus on target during execution of long run
