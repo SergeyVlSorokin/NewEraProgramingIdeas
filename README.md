@@ -54,6 +54,7 @@ Seems like this is exaclty a weakly-sutable for AI problem, as it is exactly an 
 - Prompts are lost, but often retried
 - I spend a lot of time trying to change prompts, finaly [found a trivial bug | implemented myself much faster]
 - can't handle large code:  I've had ChatGPT lose track of the goal with larger endeavours and had to rebuild the same script twice. I've found that combining LLMs for writing with "chunking" techniques (e.g. writing code in small sequential pieces in Zapier) to be an effective technique for getting around this problem. This way, you can build a chunk and test it, before it's gone from the LLM's memory.
+- can generate repeated code instead of creating and calling functions
 - When an agent starts getting confused and doing really daft things, it's probably best to start a new session with fresh context.
 - Make sure your prompts give clear rules about how to work with your project. Best if your rules are codified and enforced.
 ## Approaches currently used with Vibe coding tools 
