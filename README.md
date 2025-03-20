@@ -101,6 +101,8 @@ This will be the model for future coding paradigm where there will be design win
 ### Multi-level approach
 - top level: general system requrements / architecture and diagramms / "pattern level" / class level / function level / loop|operator level
 - we should be able to drill down at places where our top-level instructions do not result in correct operation of a system
+- abstractions leak. Will we be able to maintain enough flexibility to bend rules when required?
+- if we focus on local changes, how do we know when to do large change?
 
 ### Switch between human and programming language on block-to-block level
 - Use llm to translate in both directions Prompt -> PL and PL -> Prompt
