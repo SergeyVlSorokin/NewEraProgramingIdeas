@@ -126,3 +126,11 @@ Or just allow embedding of traditional programming language in natural language 
 - when people write books they do not go from start to finish in one pass. I believe they jump from one place to another and fill details in between, change things, etc.
 - can this apply to software development? We may consider top-down approach to be a representation of this: we define general structure and than fill it with details. But sometimes we should backtrack and change decisions on higher lever, or move things around.
 - It may make sence to start working deeper on areas which are less clear, so that we clarify them first and if neccesary adjust requirements for things around.
+
+# Target audience
+AI-enabled development of large software projects with good control by software engineers 
+Small projects - will not work, already served well by single-short tools (replit, Claude Code)
+## Risks
+- will not produce an order of magnitude improvement in productivity of SE (already mentioned in analysis option 1)
+- single short will work for large projects (but how will specification/prompt look like?)
+- AI agents will get AGI and will work exactly like we work now
