@@ -96,13 +96,13 @@ This will be the model for future coding paradigm where there will be design win
 - LLMs seems to not able to keep focus on target during execution of long run
 - LLMs are bad at selecting good/promising solutions from generated options (e.g. invent a novel research direction, understand which theorem can be interesting/good to solve)
   
-## Approaches for next-gen AI Programming
+## Approaches/features for next-gen AI Programming
 
 ### Multi-level approach
 - top level: general system requrements / architecture and diagramms / "pattern level" / class level / function level / loop|operator level
 - we should be able to drill down at places where our top-level instructions do not result in correct operation of a system
 - abstractions leak. Will we be able to maintain enough flexibility to bend rules when required?
-- if we focus on local changes, how do we know when to do large change?
+- if we focus on local changes, how do we know when to do large change? How will we understand if need to escalate a change from local to global?
 
 ### Switch between human and programming language on block-to-block level
 - Use llm to translate in both directions Prompt -> PL and PL -> Prompt
@@ -127,6 +127,9 @@ Or just allow embedding of traditional programming language in natural language 
 - can this apply to software development? We may consider top-down approach to be a representation of this: we define general structure and than fill it with details. But sometimes we should backtrack and change decisions on higher lever, or move things around.
 - It may make sence to start working deeper on areas which are less clear, so that we clarify them first and if neccesary adjust requirements for things around.
 
+### Keep documentation in sync with code
+- If we keep syncing code with documentation (which provides top-level context on what this code should do and how it should be organised) in both directions, than we will have documentation which is allways up-to-date.
+
 # Target audience
 AI-enabled development of large software projects with good control by software engineers 
 Small projects - will not work, already served well by single-short tools (replit, Claude Code)
@@ -134,3 +137,4 @@ Small projects - will not work, already served well by single-short tools (repli
 - will not produce an order of magnitude improvement in productivity of SE (already mentioned in analysis option 1)
 - single short will work for large projects (but how will specification/prompt look like?)
 - AI agents will get AGI and will work exactly like we work now
+
