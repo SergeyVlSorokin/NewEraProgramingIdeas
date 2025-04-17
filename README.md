@@ -134,6 +134,9 @@ would it be cheaper to train project-specific model with knowledge of used set o
 
 ### Keep documentation in sync with code
 - If we keep syncing code with documentation (which provides top-level context on what this code should do and how it should be organised) in both directions, than we will have documentation which is allways up-to-date.
+- 
+### have a tool to query requirements of parts of system
+should llm have a possibility to query specifications for a parts of code, which code that it is generated now should interoperate?
 
 # Target audience
 AI-enabled development of large software projects with good control by software engineers 
