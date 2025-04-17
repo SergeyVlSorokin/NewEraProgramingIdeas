@@ -141,8 +141,11 @@ should llm have a possibility to query specifications for a parts of code, which
 # Target audience
 AI-enabled development of large software projects with good control by software engineers 
 Small projects - will not work, already served well by single-short tools (replit, Claude Code)
+
+- think about exact areas where tighter control over code that can be provided with "throw and regenerate" is actually required. 
 ## Risks
 - will not produce an order of magnitude improvement in productivity of SE (already mentioned in analysis option 1)
 - single short will work for large projects (but how will specification/prompt look like?)
+    : let's find areas where this will now work due to critical quality requirements.
 - AI agents will get AGI and will work exactly like we work now
 
