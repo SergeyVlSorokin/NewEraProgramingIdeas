@@ -124,6 +124,9 @@ Or just allow embedding of traditional programming language in natural language 
 - provide better context v.r.t. libraries used in development.
 - solve problems with documentation missing/underrepresented in LLM pretrain data
 
+### ... or retain model?
+would it be cheaper to train project-specific model with knowledge of used set of libs instead of adding docs to all prompts? 
+
 ### Non-linear generation
 - when people write books they do not go from start to finish in one pass. I believe they jump from one place to another and fill details in between, change things, etc.
 - can this apply to software development? We may consider top-down approach to be a representation of this: we define general structure and than fill it with details. But sometimes we should backtrack and change decisions on higher lever, or move things around.
