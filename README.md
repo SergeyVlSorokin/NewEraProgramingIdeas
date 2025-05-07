@@ -115,6 +115,7 @@ Or just allow embedding of traditional programming language in natural language 
 - Seems to rely on comments to keep track of what it is going to do -> Let it do in a structured way
 - Do more than asked and do wrong things as result
 - Ignores styling preferences -> Should we have code style loaded to context
+- it is easy to verify if software works (for some extend :) ), so it is easy to train models to generate code which solves done easy to verify task. However, it is not easy to verify that code is off good quality (subjective), so allow for good maintainability. And here we will likely have a place for human expertise.
 
 ### Future is a group of specialized agents working together?
 - one generates code, another checks "what function arguments should be, of what type and in what order". What kind of questions to we ask ourselfs when we do programming?
