@@ -100,6 +100,10 @@ This will be the model for future coding paradigm where there will be design win
   
 ## Approaches/features for next-gen AI Programming
 
+### New Programming Language vs Specification Management System + Workflow
+explain workflow
+explain what is needed to support workflow
+
 ### Multi-level approach
 - top level: general system requrements / architecture and diagramms / "pattern level" / class level / function level / loop|operator level
 - we should be able to drill down at places where our top-level instructions do not result in correct operation of a system
@@ -135,7 +139,10 @@ would it be cheaper to train project-specific model with knowledge of used set o
 
 ### Keep documentation in sync with code
 - If we keep syncing code with documentation (which provides top-level context on what this code should do and how it should be organised) in both directions, than we will have documentation which is allways up-to-date.
-- 
+
+#### Refactoring
+We can use refactoring tools to change e.g. names of classes, but if we have a lot of context in comments/docstrings, how do we ensure they are updated as well? Can IDE renaming tools be extended to it? Can we run a sort of pararllel language server?
+ 
 ### have a tool to query requirements of parts of system
 should llm have a possibility to query specifications for a parts of code, which code that it is generated now should interoperate?
 
