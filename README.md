@@ -106,6 +106,8 @@ explain what is needed to support workflow
 
 - **what we need is to keep essential information about project structure, intentions behind this structure, etc - look for context that are lost now. That can give an edge in growing large projects, that is not in place now. We need to make it easier, by saving more information about intentions / requirements behind code.**
 
+- how can we make model to look at description first, not implementation? and in general, how to find good context for a task? can tags help? can we test if model ignores extra context of instructed to do so?
+
 ### Multi-level approach
 - top level: general system requrements / architecture and diagramms / "pattern level" / class level / function level / loop|operator level
 - we should be able to drill down at places where our top-level instructions do not result in correct operation of a system
