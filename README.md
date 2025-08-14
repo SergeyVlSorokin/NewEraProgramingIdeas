@@ -111,11 +111,13 @@ explain what is needed to support workflow
 ### Multi-level approach
 - top level: general system requrements / architecture and diagramms / "pattern level" / class level / function level / loop|operator level
 - we should be able to drill down at places where our top-level instructions do not result in correct operation of a system
+- UI should allow easy control over level at which we are looking at code (example: test purpose <-> detailed test description <-> test code ), switching between abstraction levels should be as easy as zooming.
 - abstractions leak. Will we be able to maintain enough flexibility to bend rules when required?
 - if we focus on local changes, how do we know when to do large change? How will we understand if need to escalate a change from local to global?
 
 ### Switch between human and programming language on block-to-block level
 - Use llm to translate in both directions Prompt -> PL and PL -> Prompt
+- we may have more levels then just "Prompt - PL", see example in "Multi-level approach"
 - sorta means we do not believe we will have a new full-scale paradigm
 Or just allow embedding of traditional programming language in natural language (but how to embedd for a part of function)
 
