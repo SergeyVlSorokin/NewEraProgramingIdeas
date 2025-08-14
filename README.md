@@ -121,6 +121,13 @@ explain what is needed to support workflow
 - sorta means we do not believe we will have a new full-scale paradigm
 Or just allow embedding of traditional programming language in natural language (but how to embedd for a part of function)
 
+### Prompt generator/editor
+- Prompts are often reused, say one can have prompts for "generate PRD", "generate architecture", "define tests needed", "generate detailed test data", "generate test code", "generate class implementation", etc.
+- But exact wording can depend on situation and likely can't be simply addressed by just having a parameter inserted in a prompt.
+- A "smart" propmpt generator can be usefull to
+    * extract "generic" prompt out of a partucular prompt used by programmer
+    * adapt "generic" prompt to particular situation, e.g. adapt test example generation prompt to exactly what should be covered (depending if data should include state of external systems, do we have input parameters, do we have returned output, do we have exceptions generated - we should not confuse our system to generate values for what we do not have) 
+
 ### Current issues with prompt programming / vibe programming
 - Seems to rely on comments to keep track of what it is going to do -> Let it do in a structured way
 - Do more than asked and do wrong things as result
