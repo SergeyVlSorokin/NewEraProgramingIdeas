@@ -128,6 +128,19 @@ Or just allow embedding of traditional programming language in natural language 
     * extract "generic" prompt out of a partucular prompt used by programmer
     * adapt "generic" prompt to particular situation, e.g. adapt test example generation prompt to exactly what should be covered (depending if data should include state of external systems, do we have input parameters, do we have returned output, do we have exceptions generated - we should not confuse our system to generate values for what we do not have) 
 
+### Dependency tracking and updating
+- Real situation:
+    * Function docstring was updated with new functionality description
+    * Tests descriptions for that functionality were generated
+    * Examples of test data was generated
+    * Now one can see that wording of functionality was misleading and causing some confusion
+-  What is needed:
+    * we need to change wording of a function description (in docstring) and regenerate test descriptions and examples.
+    * we should consider that test file contains not only affected tests, but other tests as well, so only part should be updated
+- Possible solutions
+    * version control/checkpoint functionality? Just revert and start over -- good if we have automatic generation process we can start one-click
+    * automatic "tree-style chat" solution: one change docstring (again) and it creates a new branch of (auto-generated) depenencies, and than one can navigate between branches. Is this the same as rollback solution? Just tree is hidden inside fine grained version control?
+
 ### Current issues with prompt programming / vibe programming
 - Seems to rely on comments to keep track of what it is going to do -> Let it do in a structured way
 - Do more than asked and do wrong things as result
