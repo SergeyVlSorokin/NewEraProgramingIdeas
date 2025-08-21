@@ -112,6 +112,7 @@ explain what is needed to support workflow
 - top level: general system requrements / architecture and diagramms / "pattern level" / class level / function level / loop|operator level
 - we should be able to drill down at places where our top-level instructions do not result in correct operation of a system
 - UI should allow easy control over level at which we are looking at code (example: test purpose <-> detailed test description <-> test code ), switching between abstraction levels should be as easy as zooming.
+  * given that we have many parents and many descendents for documents, it is not clear which branch this zoom in/out should follow, probably selection from a lists (of parents/descendents) is a way to go.
 - abstractions leak. Will we be able to maintain enough flexibility to bend rules when required?
 - if we focus on local changes, how do we know when to do large change? How will we understand if need to escalate a change from local to global?
 
