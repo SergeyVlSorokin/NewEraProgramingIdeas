@@ -124,6 +124,14 @@ explain what is needed to support workflow
 - sorta means we do not believe we will have a new full-scale paradigm
 Or just allow embedding of traditional programming language in natural language (but how to embedd for a part of function)
 
+### Dynamic dependency updating
+Let's say we created a description of a function, and system generated corresponding code. If we see that code is not what we want, it could be good if we then add more requirement to the description and immidiately see how code is changed to reflect this requirement, so we can rapidly adapt requirements on a fly to get to required state fast.
+- some light LLM can be used to determine if user input is complete to trigger code regeneration
+- could be used with autocompletion feature accepting corrections through voice input (but then we risk loosing some content which was audio only - where should it go?)
+- how this could work if we have several levels down current one, or several documents on the same level? How this can be displayed?
+- how it works in UP direction?
+- should we have a dedicated mode we enter to activate it, and then confirm/reject changes we get?
+
 ### Prompt generator/editor
 - Prompts are often reused, say one can have prompts for "generate PRD", "generate architecture", "define tests needed", "generate detailed test data", "generate test code", "generate class implementation", etc.
 - But exact wording can depend on situation and likely can't be simply addressed by just having a parameter inserted in a prompt.
