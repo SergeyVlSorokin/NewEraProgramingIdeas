@@ -57,6 +57,7 @@ Seems like this is exaclty a weakly-sutable for AI problem, as it is exactly an 
 - can generate repeated code instead of creating and calling functions
 - When an agent starts getting confused and doing really daft things, it's probably best to start a new session with fresh context.
 - Make sure your prompts give clear rules about how to work with your project. Best if your rules are codified and enforced.
+- When agent is doing changes, human sees low-level changes to codebase, not neccessary in logical order. It is thus can be hard to understand what agent is about to do, and change a direction of his action if human disagree.
 ### Problems "classical" approach
 - One often have a situation when intention of a code is not clear. We have some logic (or some test), but why it is here? What was the reason behind it? Was there any reason at all, or this was some random implementation twist/error. Often this is lost/forgotten. If we will fix intentions in specification this can resolve that problem.  
 ## Approaches currently used with Vibe coding tools 
