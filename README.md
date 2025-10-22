@@ -188,6 +188,7 @@ should llm have a possibility to query specifications for a parts of code, which
 # Target audience
 AI-enabled development of large software projects with good control by software engineers 
 Small projects - will not work, already served well by single-short tools (replit, Claude Code)
+Damage that can be done by faulty software is unlimited. We should focus on development at areas where potential damage is high.
 
 - think about exact areas where tighter control over code that can be provided with "throw and regenerate" is actually required. 
 ## Risks
