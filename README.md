@@ -178,6 +178,7 @@ would it be cheaper to train project-specific model with knowledge of used set o
 
 ### Keep documentation in sync with code
 - If we keep syncing code with documentation (which provides top-level context on what this code should do and how it should be organised) in both directions, than we will have documentation which is allways up-to-date.
+- documentation should enable agent or human to continue development without need to reevaluate what's going on there, solving problem we have now when we cannot easily return to project we do not touch for a few months and be productive from first minute. That should not be the case any longer. On all levels, both for code, high level targets and everywhere in-between.
 
 #### Refactoring
 We can use refactoring tools to change e.g. names of classes, but if we have a lot of context in comments/docstrings, how do we ensure they are updated as well? Can IDE renaming tools be extended to it? Can we run a sort of pararllel language server?
