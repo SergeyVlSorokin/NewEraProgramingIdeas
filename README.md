@@ -119,6 +119,12 @@ explain what is needed to support workflow
 - abstractions leak. Will we be able to maintain enough flexibility to bend rules when required?
 - if we focus on local changes, how do we know when to do large change? How will we understand if need to escalate a change from local to global?
 
+### Linking to requirements
+- Can something like Obsidian link system be used to show documents current one depend on (and they form context for LLM generation)
+- How do we refence parts of document (both target and source)?
+    * Can it be grammar-aware, e.g. if we reference from a function we only affect context when working with this particular function
+    * introduce some "scope setting" comments which will allow to establish some scope structure inside documents using programming language comments + special format inside. Won't that be brittle with version control merges?
+
 ### Switch between human and programming language on block-to-block level
 - Use llm to translate in both directions Prompt -> PL and PL -> Prompt
 - we may have more levels then just "Prompt - PL", see example in "Multi-level approach"
