@@ -186,6 +186,10 @@ would it be cheaper to train project-specific model with knowledge of used set o
 - If we keep syncing code with documentation (which provides top-level context on what this code should do and how it should be organised) in both directions, than we will have documentation which is allways up-to-date.
 - documentation should enable agent or human to continue development without need to reevaluate what's going on there, solving problem we have now when we cannot easily return to project we do not touch for a few months and be productive from first minute. That should not be the case any longer. On all levels, both for code, high level targets and everywhere in-between. We should keep all project related information in project itself: ideas, architecture, coffee, deployment. Everything should be in there, so we can continue any discussion or devolvement at any moment. Should we not allow unstructured dialog with AI at all?
 
+### Document-centered AI interaction
+- Building on previous idea that everything should be in same form, and that form should be a document, could we build and AI interaction which is in form of documents only, no chat?... Like chat is unstructured and information in it would be most likely lost.
+- Do not think that will work. I think it is better to have chat around documents, so that ideas can be discussed and iterated, but final results are in form of a document.
+
 #### Refactoring
 We can use refactoring tools to change e.g. names of classes, but if we have a lot of context in comments/docstrings, how do we ensure they are updated as well? Can IDE renaming tools be extended to it? Can we run a sort of pararllel language server?
  
