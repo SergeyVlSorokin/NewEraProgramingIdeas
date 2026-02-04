@@ -183,8 +183,12 @@ would it be cheaper to train project-specific model with knowledge of used set o
 - can this apply to software development? We may consider top-down approach to be a representation of this: we define general structure and than fill it with details. But sometimes we should backtrack and change decisions on higher lever, or move things around.
 - It may make sence to start working deeper on areas which are less clear, so that we clarify them first and if neccesary adjust requirements for things around.
 
-### Keep documentation in sync with code
+### Keep documentation/requirements in sync with code
 - If we keep syncing code with documentation (which provides top-level context on what this code should do and how it should be organised) in both directions, than we will have documentation which is allways up-to-date.
+- if code (or any other generated document) is changed by the human. Question is, how do we ensure that this change is persistent when/if document is regenerated -> we should understand and fix in upstream document(s) why this was neccessary, so that concern will be addressed next time automatically: 
+  - system should track affected documents (both upstream and downstream) that were not revisited yet
+  - system can highlight any contradictions with existing requirements
+  - system can propose change to requirements (upsteram document, or whatever we depend on) which should lead to no human intervention needed if code is regenerated. System can try to understand which upstream document is most relevant for addressing this change (what we are changing: business logic, formatting preferences, non-functional requirements?).
 - documentation should enable agent or human to continue development without need to reevaluate what's going on there, solving problem we have now when we cannot easily return to project we do not touch for a few months and be productive from first minute. That should not be the case any longer. On all levels, both for code, high level targets and everywhere in-between. We should keep all project related information in project itself: ideas, architecture, coffee, deployment. Everything should be in there, so we can continue any discussion or devolvement at any moment. Should we not allow unstructured dialog with AI at all?
 
 ### Document-centered AI interaction
