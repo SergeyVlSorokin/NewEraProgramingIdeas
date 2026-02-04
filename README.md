@@ -165,6 +165,7 @@ Let's say we created a description of a function, and system generated correspon
 - Ignores styling preferences -> Should we have code style loaded to context
 - it is easy to verify if software works (for some extend :) ), so it is easy to train models to generate code which solves done easy to verify task. However, it is not easy to verify that code is off good quality (subjective), so allow for good maintainability. And here we will likely have a place for human expertise.
 - A lot of people comment that typed languages improve agent code generation (typescript vs javascript) - this looks like a confirmation that increasing amount of context improves AI code generation.
+- requirements are totaly lost (if only provided in prompts) or put in places where they are not accessed any longer (e.g. using BMAD a lot of useful info is put in user stories only). That's like writing program in C++, compile it, throw away source code, test, rewrite C++ from scratch.
 
 ### Future is a group of specialized agents working together?
 - one generates code, another checks "what function arguments should be, of what type and in what order". What kind of questions to we ask ourselfs when we do programming?
