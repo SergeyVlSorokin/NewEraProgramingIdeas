@@ -189,11 +189,22 @@ would it be cheaper to train project-specific model with knowledge of used set o
   - system should track affected documents (both upstream and downstream) that were not revisited yet
   - system can highlight any contradictions with existing requirements
   - system can propose change to requirements (upsteram document, or whatever we depend on) which should lead to no human intervention needed if code is regenerated. System can try to understand which upstream document is most relevant for addressing this change (what we are changing: business logic, formatting preferences, non-functional requirements?).
+  - Possibly new upstream document can be added (e.g. before we did not have style guide)
 - documentation should enable agent or human to continue development without need to reevaluate what's going on there, solving problem we have now when we cannot easily return to project we do not touch for a few months and be productive from first minute. That should not be the case any longer. On all levels, both for code, high level targets and everywhere in-between. We should keep all project related information in project itself: ideas, architecture, coffee, deployment. Everything should be in there, so we can continue any discussion or devolvement at any moment. Should we not allow unstructured dialog with AI at all?
 
 ### Document-centered AI interaction
 - Building on previous idea that everything should be in same form, and that form should be a document, could we build and AI interaction which is in form of documents only, no chat?... Like chat is unstructured and information in it would be most likely lost.
 - Do not think that will work. I think it is better to have chat around documents, so that ideas can be discussed and iterated, but final results are in form of a document.
+- More pragmatic approach seems to be interliving documents and prompts:
+  - we start with some document, e.g. project brief or just initial idea documented
+  - than human create a prompt, which tells what kind of document we are going to create next
+  - LLM generate that document, e.g. PRD
+  - human gives another prompt
+  - LLM generate next document, e.g. project architecture
+  - there should be opportunity to discuss current document with LLM, making changes (which should be reflected in upstream document(s)).
+    - How do we adress situation when LLM asks clarifying questions and user provides answers
+      - do we treat those answers as next document(s) in our chain (e.g. prompt was "Do X and ask me questions to clarify if needed", list of questions is a document, user answers are next prompt, whatever LLM create out of it is next document which should document those answers?)
+      - or do we create a new upstream document(s) for answers, so they become input to original prompt "Do X and ask me questions to clarify if needed", which is than rerun and produce required document X when no new clarification is needed. That can take several iterations.
 
 #### Refactoring
 We can use refactoring tools to change e.g. names of classes, but if we have a lot of context in comments/docstrings, how do we ensure they are updated as well? Can IDE renaming tools be extended to it? Can we run a sort of pararllel language server?
