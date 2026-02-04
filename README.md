@@ -206,7 +206,15 @@ would it be cheaper to train project-specific model with knowledge of used set o
       - do we treat those answers as next document(s) in our chain (e.g. prompt was "Do X and ask me questions to clarify if needed", list of questions is a document, user answers are next prompt, whatever LLM create out of it is next document which should document those answers?)
       - or do we create a new upstream document(s) for answers, so they become input to original prompt "Do X and ask me questions to clarify if needed", which is than rerun and produce required document X when no new clarification is needed. That can take several iterations.
 
-#### Refactoring
+### Addressing ambiguity of human language
+- human language is ambigious and the only way to combat it is checking result of LLM output up untill we reach level of (more or less) unambigious code. Other approaches are just unresponsible.
+- if we see misunderstanding we clarify it by changing/expanding requirements, but one can not be sure that all ambigioty is totaly resolved.
+  - maybe regenerate downstream document many times and compare to check that they all match expectations in order to locate any imprecision left in upstream documents?
+  - That will requie some automatic difference detection and clustering probably?
+  - Should check that differences are not due to LLM ignoring requirements, but due to genuine gaps in them.
+  - And a lot of money.
+
+### Refactoring
 We can use refactoring tools to change e.g. names of classes, but if we have a lot of context in comments/docstrings, how do we ensure they are updated as well? Can IDE renaming tools be extended to it? Can we run a sort of pararllel language server?
  
 ### have a tool to query requirements of parts of system
