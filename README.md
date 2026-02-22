@@ -166,6 +166,22 @@ Let's say we created a description of a function, and system generated correspon
 - it is easy to verify if software works (for some extend :) ), so it is easy to train models to generate code which solves done easy to verify task. However, it is not easy to verify that code is off good quality (subjective), so allow for good maintainability. And here we will likely have a place for human expertise.
 - A lot of people comment that typed languages improve agent code generation (typescript vs javascript) - this looks like a confirmation that increasing amount of context improves AI code generation.
 - requirements are totaly lost (if only provided in prompts) or put in places where they are not accessed any longer (e.g. using BMAD a lot of useful info is put in user stories only). That's like writing program in C++, compile it, throw away source code, test, rewrite C++ from scratch.
+- OpenAI review process missing review of prompts [https://habr.com/ru/companies/ods/articles/1001012/] [https://newsletter.pragmaticengineer.com/p/how-codex-is-built]:
+     **Проблема с pull request'ами для дата-агента**
+Команда Эммы столкнулась с той же проблемой pull request'ов, которую Петер Штайнбергер описал в своём выступлении на The Pragmatic Engineer Podcast: самого кода недостаточно, чтобы оценить качество pull request'а, — нужно также знать намерение и промпт, который был использован.
+
+Эмма объясняет:
+
+«Наш дата-агент — внутренний инструмент, который вызывает большой энтузиазм у сотрудников OpenAI, поэтому люди по всей компании хотят контрибьютить.
+
+Но мы видим проблему: люди запускают Codex и отправляют pull request. Если вы не дали Codex "правильный" промпт, сгенерированный код может дублировать уже существующий. И Codex этого не узнает, если не дать ему нужный контекст.
+
+Поэтому мы перестали мержить любой PR без возможности увидеть использованный промпт. Если промпта нет в PR, мы буквально пишем человеку в Slack: "Какой был промпт?" И дальше итерируем над ним».
+
+Есть все основания полагать, что множество инженерных команд столкнётся с этой же проблемой: при работе с ИИ-сгенерированным кодом нужно ревьюить промпт, а не только код. Именно поэтому Meta добавила фичу «траекторий» поверх существующего процесса код-ревью, и именно поэтому The Pulse освещал, как эта проблема распространяется по индустрии
+
+  **Pull request'ы уже начинают «ломаться».** В OpenAI команды ощущают боль от отсутствия доступа к промпту, использованному для генерации pull request'а, и применяют самодельные обходные решения. Сама концепция pull request'ов может быть готова к переосмыслению, и, возможно, появится новый инфраструктурный слой.
+  
 - when using AI code completion user can see that it is heading in wrong direction, but do not have a way to correct it otherwise but by continue typing unless there is enough context here for AI to understand user intend. Would be very nice to have "side channel" input to steer in correct direction.
   - voice input is ideal here
   - can work with text as well, if we have done hotkey to switch between entering code and chatting with AI. But probably too slow for productive work. Maybe useful for debugging.
