@@ -243,6 +243,15 @@ We can use refactoring tools to change e.g. names of classes, but if we have a l
 ### have a tool to query requirements of parts of system
 should llm have a possibility to query specifications for a parts of code, which code that it is generated now should interoperate?
 
+# Example non-programming workflow - create presentation
+- create plan at section level
+- create slide titles for section
+- create slides, maybe generating some ideas what we should tell about [subject]
+- decide to expand some of the list items (ideas) to separate slides
+- decide to split slide to several, because of high content
+- decide to join/summarize something to save time
+- reorder on section/slide levels
+
 # Target audience
 AI-enabled development of large software projects with good control by software engineers 
 Small projects - will not work, already served well by single-short tools (replit, Claude Code)
